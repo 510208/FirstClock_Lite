@@ -136,9 +136,11 @@ End Sub
 Private Sub UITop_Click()
 If UITop.Checked Then    '只宣告X變數預設值是0，第一次按下按鈕時X為0
 IntR = SetWindowPos(Me.hwnd, -1, 0, 0, 0, 0, 3)   '最上層顯示
-top.Caption = "取消最上層顯示(&T)"
+UITop.Caption = "取消最上層顯示(&T)"
+UITop.Checked = False
 Else
 IntR = SetWindowPos(Me.hwnd, -2, 0, 0, 0, 0, 3)   '取消最上層顯示
-top.Caption = "最上層顯示(&T)"
+UITop.Caption = "最上層顯示(&T)"
+UITop.Checked = True
 End If
 End Sub
